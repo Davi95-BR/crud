@@ -1,14 +1,26 @@
-const listaClientes = () => { 
-        return fetch(`http://localhost:3000/profile`) // Método global da interface (Fetch API) usando GET e devolvendo uma promise
-        .then(resposta => {  
-            return resposta.json()
-        })
+const listaClientes = () =>  {
+    return fetch(`http://localhost:3000/profile`)
+    .then(resposta => {
+        return resposta.json()
+    })
 }
 
-export const clienteService = {
-    listaCliente
+const criaCliente = (nome, email) => {
+    return fetch(`http://localhost:3000/profile`, {
+        method: 'POST'
+        headers: {
+            'Content-Type' : 'application/json'
+        },
+        body: JSON.stringify({nome: nome, email: email})
+    })
+    .then( resposta => {
+        return resposta.body
+    })
 }
 
-   
+export const clienteService = { 
+    listaClientes,
+    criaCliente
+}
 
        
