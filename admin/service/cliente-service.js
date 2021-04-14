@@ -24,12 +24,6 @@ const removeCliente = (id) => {
 
 }
 
-<<<<<<< Updated upstream
-export const clienteService = { 
-    listaClientes,
-    criaCliente,
-    removeCliente
-=======
 const detalhaCliente = (id) => {
     return fetch(`http://localhost:3000/profile/${id}`)
     .then(resposta => {
@@ -56,7 +50,6 @@ export const clienteService = {
     removeCliente,
     detalhaCliente,
     atualizaCliente
->>>>>>> Stashed changes
 }
 
        
