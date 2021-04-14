@@ -31,8 +31,6 @@ const detalhaCliente = (id) => {
     })
 }
 
-<<<<<<< HEAD
-=======
 const atualizaCliente = (id, nome, email) => {
     return fetch(`http://localhost:3000/profile/${id}`, {
         method: 'PUT',
@@ -46,17 +44,12 @@ const atualizaCliente = (id, nome, email) => {
     })
 }
 
->>>>>>> master
 export const clienteService = { 
     listaClientes,
     criaCliente,
     removeCliente,
-<<<<<<< HEAD
-    detalhaCliente
-=======
     detalhaCliente,
     atualizaCliente
->>>>>>> master
 }
 
        

@@ -11,9 +11,6 @@ clienteService.detalhaCliente(id)
 .then(dados => {
     inputNome.value = dados.nome
     inputEmail.value = dados.email
-<<<<<<< HEAD
-})  
-=======
 }) 
 
 const formulario = document.querySelector('[data-form]')
@@ -26,4 +23,3 @@ formulario.addEventListener('submit', (evento) => {
         window.location.href = "../telas/edicao_concluida.html"
     })
 })
->>>>>>> master
